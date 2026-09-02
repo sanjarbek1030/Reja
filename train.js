@@ -1,3 +1,18 @@
+// Extra tasks No2
+// Function Declaration
+function countDigits(str) {
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+      if (str[i] >= "0" && str[i] <= "9") {
+          count++;
+      }
+  }
+  return count;
+}
+
+console.log(countDigits("uz12bek345is67tan890"));
+
 // lesson No21, Call back funcs.
 console.log("Jack Ma maslahatlari");
 const list = [
@@ -109,7 +124,7 @@ function countLetters(str, char) {
     return count;
   }
   
-console.log(countLetters("sanjar", "a"));
-console.log(countLetters2("boburbek", "b"));
-console.log(countLetters3("mexanizatsiyalashtirilganligidanmikina", "a"));
+//console.log(countLetters("sanjar", "a"));
+//console.log(countLetters2("boburbek", "b"));
+//console.log(countLetters3("mexanizatsiyalashtirilganligidanmikina", "a"));
   
