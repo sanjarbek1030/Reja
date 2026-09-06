@@ -1,3 +1,22 @@
+// Extra tasks No3
+// MITASK-C
+// Function Declaration
+function checkContent(str1, str2) {
+  const txt1 = str1.split('').sort().join('');
+  const txt2 = str2.split('').sort().join('');
+  if (txt1===txt2) return true;
+  else {
+    return false;
+  }
+}
+
+// testing
+console.log(checkContent("abc", "bac"));
+console.log(checkContent("abc", "bas"));
+console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(checkContent("hello", "yellow"));
+
+
 // Extra tasks No2
 // Function Declaration
 function countDigits(str) {
@@ -11,10 +30,10 @@ function countDigits(str) {
   return count;
 }
 
-console.log(countDigits("uz12bek345is67tan890"));
+//console.log(countDigits("uz12bek345is67tan890"));
 
 // lesson No21, Call back funcs.
-console.log("Jack Ma maslahatlari");
+//console.log("Jack Ma maslahatlari");
 const list = [
   "yaxshi talaba bo'ling", // 0-20
   "to'g'ri boshliq tanlang va ko'proq o'rganing", // 20-30
