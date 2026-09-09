@@ -1,3 +1,74 @@
+// Extra tasks No4
+// MITASK-D
+// Class Declaration
+class Shop {
+  // 1. Constructor - obyekt yaratilganda mahsulotlar sonini qabul qiladi
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  // Hozirgi soat va daqiqani (masalan, 20:40) qaytaruvchi yordamchi funksiya
+  getVaqt() {
+    const hozir = new Date();
+    const soat = String(hozir.getHours()).padStart(2, '0');
+    const daqiqa = String(hozir.getMinutes()).padStart(2, '0');
+    return `${soat}:${daqiqa}`;
+  }
+
+  // 2. Qoldiqni ko'rsatish metodi
+  qoldiq() {
+    const vaqt = this.getVaqt();
+    const matn = `hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`;
+    console.log(matn);
+    return matn;
+  }
+
+  // 3. Mahsulot sotish metodi
+  sotish(mahsulot, miqdor) {
+    const vaqt = this.getVaqt();
+    
+    if (this[mahsulot] !== undefined) {
+      if (this[mahsulot] >= miqdor) {
+        this[mahsulot] -= miqdor;
+        console.log(`${vaqt}da ${miqdor}ta ${mahsulot} sotildi.`);
+      } else {
+        console.log(`${vaqt}da yetarli ${mahsulot} yo'q! Kassa qoldig'i: ${this[mahsulot]}ta.`);
+      }
+    } else {
+      console.log(`Bunday mahsulot (${mahsulot}) do'konda yo'q!`);
+    }
+  }
+
+  // 4. Yangi mahsulot qabul qilish metodi
+  qabul(mahsulot, miqdor) {
+    const vaqt = this.getVaqt();
+    
+    if (this[mahsulot] !== undefined) {
+      this[mahsulot] += miqdor;
+      console.log(`${vaqt}da ${miqdor}ta ${mahsulot} qabul qilindi.`);
+    } else {
+      console.log(`Bunday mahsulot (${mahsulot}) do'konda mavjud emas!`);
+    }
+  }
+}
+
+// Do'konni yaratamiz: 4ta non, 5ta lagmon, 2ta cola
+const shop = new Shop(4, 5, 2);
+
+// Qoldiqni tekshirish
+console.log(shop.qoldiq()); 
+
+// Sotish va qabul qilish
+console.log(shop.sotish('non', 3));
+console.log(shop.qabul('cola', 4));
+
+// Yangilangan qoldiqni ko'rish
+console.log(shop.qoldiq()); 
+
+
+
 // Extra tasks No3
 // MITASK-C
 // Function Declaration
@@ -11,10 +82,10 @@ function checkContent(str1, str2) {
 }
 
 // testing
-console.log(checkContent("abc", "bac"));
-console.log(checkContent("abc", "bas"));
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log(checkContent("hello", "yellow"));
+//console.log(checkContent("abc", "bac"));
+//console.log(checkContent("abc", "bas"));
+//console.log(checkContent("mitgroup", "gmtiprou"));
+//console.log(checkContent("hello", "yellow"));
 
 
 // Extra tasks No2
