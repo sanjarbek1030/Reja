@@ -1,3 +1,55 @@
+// Extra tasks No5
+// MITASK-C
+// Function Declaration
+function findDoublers(str)
+{
+  // new text: old text -> lower case letters -> array -> sort -> string
+  const txt = str.toLowerCase().split('').sort().join('');
+  // output is false for now.
+  let output = false;
+
+  // looping through our text
+  for (let i = 0; i < txt.length-1; i++){
+    // if two letters match execute if statement
+    if (txt[i] === txt[i+1]){
+      // if statement triggers output assigns true
+      output = true;
+      // leave the for loop immidiately
+      break;
+    }
+  }
+  // return the result
+  return output;
+}
+
+// Function Declaration
+function checkDoublers(str){
+  
+  // new arr1: old text -> lower case letters -> arry
+  let arr1 = str.toLowerCase().split("");
+  // new empty arr2
+  let arr2 = [];
+
+  // loop through arr1
+  for (let i = 0; i < arr1.length; i++){
+  // making sure no similar letters included
+  if (!arr2.includes(arr1[i]))
+    {
+      // pushing unique letter to new arr2
+      arr2.push(arr1[i]);
+    }
+  }
+  // not false -> true; not true -> false
+  return arr1.length !== arr2.length;
+}
+
+// testing
+console.log(checkDoublers("Asdfgha")); // true
+console.log(checkDoublers("Asdfgh")); // false
+
+console.log(findDoublers('abcd')); // false
+console.log(findDoublers('asdfghja')); // true
+
 // Extra tasks No4
 // MITASK-D
 // Class Declaration
@@ -55,17 +107,17 @@ class Shop {
 }
 
 // Do'konni yaratamiz: 4ta non, 5ta lagmon, 2ta cola
-const shop = new Shop(4, 5, 2);
+//const shop = new Shop(4, 5, 2);
 
 // Qoldiqni tekshirish
-console.log(shop.qoldiq()); 
+//console.log(shop.qoldiq()); 
 
 // Sotish va qabul qilish
-console.log(shop.sotish('non', 3));
-console.log(shop.qabul('cola', 4));
+//console.log(shop.sotish('non', 3));
+//console.log(shop.qabul('cola', 4));
 
 // Yangilangan qoldiqni ko'rish
-console.log(shop.qoldiq()); 
+//console.log(shop.qoldiq()); 
 
 
 
