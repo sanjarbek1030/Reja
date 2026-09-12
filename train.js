@@ -1,4 +1,45 @@
 // Extra tasks No5
+// MITASK-E
+
+// Array push method *Good*
+// 1st Function Declaration
+function getReverse1(str){
+  let arr1 = str.split("");
+  let arr2 = [];
+  
+  for(let i = arr1.length-1; i >= 0; i--){
+      arr2.push(arr1[i]);
+  }
+  return arr2.join("");
+}
+
+
+// String concatenation method *Better*
+// 2nd Function Declaration
+function getReverse2(str){
+  let txt = "";
+
+  for(let i = str.length-1; i >= 0; i--){
+    txt += str[i];
+  }
+  return txt;
+}
+
+
+// Array reverse method *The Best*
+// 3rd Function Declaration
+function getReverse3(str){
+  return str.split("").reverse().join("") 
+}
+
+// testing our functions
+console.log(getReverse1("hello"))
+console.log(getReverse2("salom"))
+console.log(getReverse3("annyong"))
+
+
+
+// Extra tasks No5
 // MITASK-C
 // Function Declaration
 function findDoublers(str)
@@ -44,11 +85,11 @@ function checkDoublers(str){
 }
 
 // testing
-console.log(checkDoublers("Asdfgha")); // true
-console.log(checkDoublers("Asdfgh")); // false
+//console.log(checkDoublers("Asdfgha")); // true
+//console.log(checkDoublers("Asdfgh")); // false
 
-console.log(findDoublers('abcd')); // false
-console.log(findDoublers('asdfghja')); // true
+//console.log(findDoublers('abcd')); // false
+//console.log(findDoublers('asdfghja')); // true
 
 // Extra tasks No4
 // MITASK-D
