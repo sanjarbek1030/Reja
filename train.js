@@ -1,3 +1,6 @@
+// Extra tasks No5
+// MITASK-D
+// Function Declaration
 let arr = [5, 21, 12, 21, 8];
 
 function getHighestIndex(arr){
@@ -5,7 +8,16 @@ function getHighestIndex(arr){
     return arr1[1];
 }
 
+// Function Declaration
+function getHighestIndex1(arr){
+  const arr1 = arr.sort((a, b) => b - a);
+  let str = String(arr1[0]);
+  return str[1];
+}
+
+// testing
 console.log(getHighestIndex(arr))
+console.log(getHighestIndex1(arr));
 
 
 // Extra tasks No5
