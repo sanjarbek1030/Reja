@@ -1,11 +1,11 @@
 // Extra tasks No5
 // MITASK-D
 // Function Declaration
-let arr = [5, 21, 12, 21, 8];
+let arr = [5, 27, 12, 27, 8];
 
 function getHighestIndex(arr){
-    const arr1 = String(Math.max(...arr));
-    return arr1[1];
+    const str = String(Math.max(...arr));
+    return str[1];
 }
 
 // Function Declaration
@@ -55,9 +55,9 @@ function getReverse3(str){
 }
 
 // testing our functions
-console.log(getReverse1("hello"))
-console.log(getReverse2("salom"))
-console.log(getReverse3("annyong"))
+//console.log(getReverse1("hello"))
+//console.log(getReverse2("salom"))
+//console.log(getReverse3("annyong"))
 
 
 
