@@ -1,3 +1,13 @@
+let arr = [5, 21, 12, 21, 8];
+
+function getHighestIndex(arr){
+    const arr1 = String(Math.max(...arr));
+    return arr1[1];
+}
+
+console.log(getHighestIndex(arr))
+
+
 // Extra tasks No5
 // MITASK-E
 
