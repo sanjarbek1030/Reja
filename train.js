@@ -1,4 +1,21 @@
-// Extra tasks No5
+// Extra tasks No7
+// MITASK-H
+// Function Declaration
+let arr0919 = [1, -4, 2, 0, -1, 3];
+function getPositive(arr){
+    let new_arr = [];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > 0) {
+            new_arr.push(arr[i]);
+        }
+    }
+    return new_arr
+}
+
+console.log(getPositive(arr0919));
+
+
+// Extra tasks No6
 // MITASK-D
 // Function Declaration
 let arr = [5, 27, 12, 27, 8];
@@ -16,8 +33,8 @@ function getHighestIndex1(arr){
 }
 
 // testing
-console.log(getHighestIndex(arr))
-console.log(getHighestIndex1(arr));
+//console.log(getHighestIndex(arr))
+//console.log(getHighestIndex1(arr));
 
 
 // Extra tasks No5
