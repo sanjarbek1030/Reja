@@ -1,7 +1,10 @@
 // Extra tasks No7
 // MITASK-H
+
+let arr0916 = [1, -4, 2, 0, -1, 3];
+const arr0917 = [-4, 2, -6, 5];
+
 // Function Declaration
-let arr0919 = [1, -4, 2, 0, -1, 3];
 function getPositive(arr){
     let new_arr = [];
     for (let i = 0; i < arr.length; i++){
@@ -9,10 +12,11 @@ function getPositive(arr){
             new_arr.push(arr[i]);
         }
     }
-    return new_arr
+    return new_arr.join("");
 }
 
-console.log(getPositive(arr0919));
+console.log(getPositive(arr0916));
+console.log(getPositive(arr0917));
 
 
 // Extra tasks No6
