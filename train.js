@@ -1,3 +1,34 @@
+// Extra tasks No8
+// MITASK-I
+// Array example
+const myArr = [1,2,3,4,5,4,3,4];
+
+// Function definition
+function majorityElement(arr) {
+  let objForCnt = {};
+  let counting = 0;
+  let result = null;
+
+  // for loop
+  for (const elem of arr) {
+      if(objForCnt[elem] === undefined){
+        objForCnt[elem] = 1;
+      } else {
+        objForCnt[elem] = objForCnt[elem] + 1;
+      }
+
+      if (objForCnt[elem] > counting) {
+          counting = objForCnt[elem];
+          result = elem;
+      }
+  }
+
+  return result;
+}
+
+// Testing
+console.log(majorityElement(myArr));
+
 // Extra tasks No7
 // MITASK-H
 
@@ -15,8 +46,8 @@ function getPositive(arr){
     return new_arr.join("");
 }
 
-console.log(getPositive(arr0916));
-console.log(getPositive(arr0917));
+//console.log(getPositive(arr0916));
+//console.log(getPositive(arr0917));
 
 
 // Extra tasks No6
