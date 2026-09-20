@@ -1,3 +1,39 @@
+/*Shunday function yozing, u raqamlardan tashkil topgan array 
+qabul qilsin va array ichidagi har bir raqam uchun raqamni 
+ozi va hamda osha raqamni kvadratidan tashkil topgan object 
+hosil qilib, hosil bolgan objectlarni array ichida qaytarsin. 
+MASALAN: getSquareNumbers([1, 2, 3]) 
+return [{number: 1, square: 1}, {number: 2, square: 4}, 
+{number: 3, square: 9}].*/
+
+// New array
+const arr0920 = [1, 2, 3, 4];
+
+// Function Declaration
+function getSquareNumbers(arr){
+  // empty array to store number, square objects
+  let newArr = [];
+
+  // looping through array
+  for (const elem of arr){
+    // creating new object to push it later to array,
+    // each loop start object becomes empty
+    let newObj = {};
+
+    // key: number = value: array element(number)
+    newObj["number"] = elem;
+    // key: square = value: array element(number)**2
+    newObj["square"] = elem * elem;
+    // pushed new object to array
+    newArr.push(newObj); 
+  }
+  // returns array with objects
+  return newArr;
+}
+
+// Testing
+console.log(getSquareNumbers(arr0920));
+
 // Extra tasks No8
 // MITASK-I
 // Array example
@@ -27,7 +63,7 @@ function majorityElement(arr) {
 }
 
 // Testing
-console.log(majorityElement(myArr));
+//'console.log(majorityElement(myArr));
 
 // Extra tasks No7
 // MITASK-H
