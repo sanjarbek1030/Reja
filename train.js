@@ -1,3 +1,21 @@
+// Shunday function yozing, u har xil valuelardan 
+// iborat array qabul qilsin va array ichidagi 
+//sonlar yigindisini hisoblab chiqqan javobni 
+// qaytarsin. MASALAN: calculateSumOfNumbers([10,
+// "10", {son: 10}, true, 35]) return 45.
+
+function calculateSumOfNumbers(arr){
+  let sum = 0;
+  for (const elem of arr){
+    if(typeof elem === 'number'){
+      sum += elem
+    }
+  }
+  return sum
+}
+const arr0926 = [10, "10", {son: 10}, true, 35]
+console.log(calculateSumOfNumbers(arr0926))
+
 /*Shunday function yozing, u raqamlardan tashkil topgan array 
 qabul qilsin va array ichidagi har bir raqam uchun raqamni 
 ozi va hamda osha raqamni kvadratidan tashkil topgan object 
@@ -32,7 +50,7 @@ function getSquareNumbers(arr){
 }
 
 // Testing
-console.log(getSquareNumbers(arr0920));
+//console.log(getSquareNumbers(arr0920));
 
 // Extra tasks No8
 // MITASK-I
