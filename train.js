@@ -1,3 +1,22 @@
+/*
+Shunday function yozing, u object qabul qilsin va arrayni object 
+arrayga otkazib arrayni qaytarsin. MASALAN: 
+objectToArray({a: 10, b: 20}) return [["a", 10], ["b", 20]].
+*/
+
+// MITASK-P
+function objectToArray(obj){
+  let newArr = [];
+  for (let [key, value] of Object.entries(obj)){
+    newArr.push([key, value]);
+  }
+  return newArr;
+}
+
+const obj = {a: 10, b: 20}
+
+console.log(objectToArray(obj))
+
 // Shunday function yozing, u har xil valuelardan 
 // iborat array qabul qilsin va array ichidagi 
 //sonlar yigindisini hisoblab chiqqan javobni 
@@ -14,7 +33,7 @@ function calculateSumOfNumbers(arr){
   return sum
 }
 const arr0926 = [10, "10", {son: 10}, true, 35]
-console.log(calculateSumOfNumbers(arr0926))
+//console.log(calculateSumOfNumbers(arr0926))
 
 /*Shunday function yozing, u raqamlardan tashkil topgan array 
 qabul qilsin va array ichidagi har bir raqam uchun raqamni 
